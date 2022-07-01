@@ -1,13 +1,16 @@
 "use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SolanaChainId = exports.BSCChainId = exports.EthereumChainId = exports.MetaversePlatform = void 0;
-var platform_1 = require("./platform");
-Object.defineProperty(exports, "MetaversePlatform", { enumerable: true, get: function () { return platform_1.MetaversePlatform; } });
-var network_1 = require("./network");
-Object.defineProperty(exports, "EthereumChainId", { enumerable: true, get: function () { return network_1.EthereumChainId; } });
-Object.defineProperty(exports, "BSCChainId", { enumerable: true, get: function () { return network_1.BSCChainId; } });
-Object.defineProperty(exports, "SolanaChainId", { enumerable: true, get: function () { return network_1.SolanaChainId; } });
-// export * from "./platform"
-// export * from "./network"
-// export * from "./asset"
+__exportStar(require("./platform"), exports);
+__exportStar(require("./network"), exports);
+__exportStar(require("./asset"), exports);
 //# sourceMappingURL=index.js.map
