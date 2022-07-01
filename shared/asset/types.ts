@@ -1,5 +1,9 @@
 import { ChainId, BlockchainNetwork } from "../network/types"
 import { MetaversePlatform } from "../platform/types"
+import { CrytovoxelsAssetDto } from "./cryptovoxels"
+import { DecentralandAssetDto } from "./decentraland"
+import { SolanaTownAssetDto } from "./solanatown"
+import { TheSandBoxAssetDto } from "./thesandbox"
 
 export type GenericAssetDto = {
     platform: MetaversePlatform
@@ -13,3 +17,9 @@ export type GenericAssetDto = {
     image: string
     external_url: string
 }
+
+export type AssetDto =
+    DecentralandAssetDto |
+    TheSandBoxAssetDto | 
+    CrytovoxelsAssetDto |
+    SolanaTownAssetDto
