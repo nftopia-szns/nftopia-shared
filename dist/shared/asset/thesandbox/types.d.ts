@@ -1,5 +1,5 @@
-import { GenericAssetDto } from "../types";
-export declare type TheSandBoxAssetDto = GenericAssetDto & {
+import { BaseAssetDto } from "../types";
+export declare type TheSandBoxAssetDto = BaseAssetDto & {
     attributes: TheSandBoxAssetAttributes;
 };
 export declare type TheSandBoxAssetAttributes = {

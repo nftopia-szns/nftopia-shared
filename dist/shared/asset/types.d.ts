@@ -4,7 +4,7 @@ import { CrytovoxelsAssetDto } from "./cryptovoxels";
 import { DecentralandAssetDto } from "./decentraland";
 import { SolanaTownAssetDto } from "./solanatown";
 import { TheSandBoxAssetDto } from "./thesandbox";
-export declare type GenericAssetDto = {
+export declare type BaseAssetDto = {
     platform: MetaversePlatform;
     network: BlockchainNetwork;
     chain_id: ChainId;
@@ -16,5 +16,5 @@ export declare type GenericAssetDto = {
     image: string;
     external_url: string;
 };
-export declare type AssetDto = DecentralandAssetDto | TheSandBoxAssetDto | CrytovoxelsAssetDto | SolanaTownAssetDto;
+export declare type GenericAssetDto = DecentralandAssetDto | TheSandBoxAssetDto | CrytovoxelsAssetDto | SolanaTownAssetDto;
 //# sourceMappingURL=types.d.ts.map

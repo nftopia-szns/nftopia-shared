@@ -1,6 +1,6 @@
-import { GenericAssetDto } from "../types"
+import { BaseAssetDto } from "../types"
 
-export type DecentralandAssetDto = GenericAssetDto & {
+export type DecentralandAssetDto = BaseAssetDto & {
     attributes: DecentralandAssetAttributes
 }
 

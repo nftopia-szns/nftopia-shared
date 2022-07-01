@@ -1,6 +1,6 @@
-import { GenericAssetDto } from "../types"
+import { BaseAssetDto } from "../types"
 
-export type CrytovoxelsAssetDto = GenericAssetDto & {
+export type CrytovoxelsAssetDto = BaseAssetDto & {
     attributes: CrytovoxelsAssetAttributes
 }
 

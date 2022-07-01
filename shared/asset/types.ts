@@ -5,7 +5,7 @@ import { DecentralandAssetDto } from "./decentraland"
 import { SolanaTownAssetDto } from "./solanatown"
 import { TheSandBoxAssetDto } from "./thesandbox"
 
-export type GenericAssetDto = {
+export type BaseAssetDto = {
     platform: MetaversePlatform
     network: BlockchainNetwork
     chain_id: ChainId
@@ -18,7 +18,7 @@ export type GenericAssetDto = {
     external_url: string
 }
 
-export type AssetDto =
+export type GenericAssetDto =
     DecentralandAssetDto |
     TheSandBoxAssetDto | 
     CrytovoxelsAssetDto |
