@@ -1,4 +1,4 @@
-import { ChainId, BlockchainNetwork } from "../network/types";
+import { ChainId, Network } from "../network/types";
 import { MetaversePlatform } from "../platform/types";
 import { CrytovoxelsAssetDto } from "./cryptovoxels";
 import { DecentralandAssetDto } from "./decentraland";
@@ -6,8 +6,8 @@ import { SolanaTownAssetDto } from "./solanatown";
 import { TheSandBoxAssetDto } from "./thesandbox";
 export declare type BaseAssetDto = {
     platform: MetaversePlatform;
-    network: BlockchainNetwork;
     chain_id: ChainId;
+    network: Network;
     contract_address?: string;
     id: string;
     name: string;

@@ -1,18 +1,18 @@
-export declare enum BlockchainNetwork {
-    Ethereum = "BlockchainNetwork.Ethereum",
-    BSC = "BlockchainNetwork.BSC",
-    Solana = "BlockchainNetwork.Solana"
+export declare enum ChainId {
+    Ethereum = "ethereum",
+    BSC = "bsc",
+    Solana = "solana"
 }
-export declare enum EthereumChainId {
-    Mainnet = "EthereumChainId.Mainnet",
-    Ropsten = "EthereumChainId.Ropsten"
+export declare enum EthereumNetwork {
+    Mainnet = "mainnet",
+    Ropsten = "ropsten"
 }
-export declare enum BSCChainId {
-    Mainnet = "BSCChainId.Mainnet"
+export declare enum BSCNetwork {
+    Mainnet = "mainnet"
 }
-export declare enum SolanaChainId {
-    Mainnet = "SolanaChainId.Mainnet",
-    Testnet = "SolanaChainId.Testnet"
+export declare enum SolanaNetwork {
+    Mainnet = "mainnet",
+    Testnet = "testnet"
 }
-export declare type ChainId = EthereumChainId | BSCChainId | SolanaChainId;
+export declare type Network = EthereumNetwork | BSCNetwork | SolanaNetwork;
 //# sourceMappingURL=types.d.ts.map

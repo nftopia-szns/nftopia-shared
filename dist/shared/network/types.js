@@ -1,24 +1,24 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SolanaChainId = exports.BSCChainId = exports.EthereumChainId = exports.BlockchainNetwork = void 0;
-var BlockchainNetwork;
-(function (BlockchainNetwork) {
-    BlockchainNetwork["Ethereum"] = "BlockchainNetwork.Ethereum";
-    BlockchainNetwork["BSC"] = "BlockchainNetwork.BSC";
-    BlockchainNetwork["Solana"] = "BlockchainNetwork.Solana";
-})(BlockchainNetwork = exports.BlockchainNetwork || (exports.BlockchainNetwork = {}));
-var EthereumChainId;
-(function (EthereumChainId) {
-    EthereumChainId["Mainnet"] = "EthereumChainId.Mainnet";
-    EthereumChainId["Ropsten"] = "EthereumChainId.Ropsten";
-})(EthereumChainId = exports.EthereumChainId || (exports.EthereumChainId = {}));
-var BSCChainId;
-(function (BSCChainId) {
-    BSCChainId["Mainnet"] = "BSCChainId.Mainnet";
-})(BSCChainId = exports.BSCChainId || (exports.BSCChainId = {}));
-var SolanaChainId;
-(function (SolanaChainId) {
-    SolanaChainId["Mainnet"] = "SolanaChainId.Mainnet";
-    SolanaChainId["Testnet"] = "SolanaChainId.Testnet";
-})(SolanaChainId = exports.SolanaChainId || (exports.SolanaChainId = {}));
+exports.SolanaNetwork = exports.BSCNetwork = exports.EthereumNetwork = exports.ChainId = void 0;
+var ChainId;
+(function (ChainId) {
+    ChainId["Ethereum"] = "ethereum";
+    ChainId["BSC"] = "bsc";
+    ChainId["Solana"] = "solana";
+})(ChainId = exports.ChainId || (exports.ChainId = {}));
+var EthereumNetwork;
+(function (EthereumNetwork) {
+    EthereumNetwork["Mainnet"] = "mainnet";
+    EthereumNetwork["Ropsten"] = "ropsten";
+})(EthereumNetwork = exports.EthereumNetwork || (exports.EthereumNetwork = {}));
+var BSCNetwork;
+(function (BSCNetwork) {
+    BSCNetwork["Mainnet"] = "mainnet";
+})(BSCNetwork = exports.BSCNetwork || (exports.BSCNetwork = {}));
+var SolanaNetwork;
+(function (SolanaNetwork) {
+    SolanaNetwork["Mainnet"] = "mainnet";
+    SolanaNetwork["Testnet"] = "testnet";
+})(SolanaNetwork = exports.SolanaNetwork || (exports.SolanaNetwork = {}));
 //# sourceMappingURL=types.js.map
