@@ -1,6 +1,6 @@
 export enum MetaversePlatform {
-    Decentraland = 'MetaversePlatform.Decentraland',
-    SandBox = 'MetaversePlatform.SandBox',
-    Cryptovoxels = 'MetaversePlatform.Cryptovoxels',
-    SolanaTown = 'MetaversePlatform.SolanaTown',
+    Decentraland = 'decentraland',
+    SandBox = 'sandbox',
+    Cryptovoxels = 'cryptovoxels',
+    SolanaTown = 'solanatown',
 }
