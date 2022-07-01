@@ -2,7 +2,8 @@
   "name": "nftopia-shared",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/app.js",
+  "main": "shared/index.js",
+  "typings": "shared/index.d.ts",
   "scripts": {
     "start": "tsc && node dist/app.js",
     "lint": "eslint . --ext .ts",
