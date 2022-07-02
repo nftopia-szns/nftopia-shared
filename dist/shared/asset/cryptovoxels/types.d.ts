@@ -8,12 +8,44 @@ export declare type CrytovoxelsAssetAttributes = {
     depth: number;
     height: number;
     elevation: number;
-    suburb: string;
-    island: string;
+    suburb: CryptovoxelsAttributeSuburb;
+    island: CryptovoxelsAttributeIsland;
     has_basement: string;
     title: string;
     "pre-built": boolean;
     waterfront: string;
     "closest-common": string;
 };
+export declare enum CryptovoxelsAttributeIsland {
+    OriginCity = "Origin City"
+}
+export declare enum CryptovoxelsAttributeSuburb {
+    Area51 = "Area 51",
+    Axies = "Axies",
+    Babylon = "Babylon",
+    DeepSouth = "Deep South",
+    Doom = "Doom",
+    FantasyFields = "Fantasy Fields",
+    Frankfurt = "Frankfurt",
+    Gangnam = "Gangnam",
+    Hiro = "Hiro",
+    Junkyard = "Junkyard",
+    Kitties = "Kitties",
+    LeMarais = "Le Marais",
+    LittleTokyo = "Little Tokyo",
+    Makers = "Makers",
+    Memes = "Memes",
+    Moon = "Moon",
+    MusicDistrict = "Music District",
+    NorthPole = "North Pole",
+    NorthTerrace = "North Terrace",
+    Oasis = "Oasis",
+    Punks = "Punks",
+    Rome = "Rome",
+    Scripting = "Scripting",
+    Shenzhen = "Shenzhen",
+    TeAro = "Te Aro",
+    TheCenter = "The Center",
+    WestEnd = "West End"
+}
 //# sourceMappingURL=types.d.ts.map
