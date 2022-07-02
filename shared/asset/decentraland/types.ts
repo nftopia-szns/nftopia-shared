@@ -7,6 +7,11 @@ export type DecentralandAssetDto = BaseAssetDto & {
 export type DecentralandAssetAttributes = {
     category: DecentralandAssetCategory
     
+    // promixity
+    distance_to_plaza: number
+    distance_to_district: number
+    distance_to_road: number
+
     // estate doesn't have coordinate
     x?: number, 
     y?: number,

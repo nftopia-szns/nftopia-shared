@@ -4,6 +4,9 @@ export declare type DecentralandAssetDto = BaseAssetDto & {
 };
 export declare type DecentralandAssetAttributes = {
     category: DecentralandAssetCategory;
+    distance_to_plaza: number;
+    distance_to_district: number;
+    distance_to_road: number;
     x?: number;
     y?: number;
     estate_size?: number;
