@@ -17,10 +17,16 @@ export type DecentralandAssetAttributes = {
     // sales
     sales?: number
     sold_at?: number
-    active_order?: object
+    active_order?: DecentralandActiveOrderAttribute
 }
 
 export enum DecentralandAssetCategory {
     Estate = 'estate',
     Parcel = 'parcel',
+}
+
+export type DecentralandActiveOrderAttribute = {
+    price: number
+    expires_at: number
+    updated_at: number
 }

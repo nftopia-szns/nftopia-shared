@@ -9,10 +9,15 @@ export declare type DecentralandAssetAttributes = {
     estate_size?: number;
     sales?: number;
     sold_at?: number;
-    active_order?: object;
+    active_order?: DecentralandActiveOrderAttribute;
 };
 export declare enum DecentralandAssetCategory {
     Estate = "estate",
     Parcel = "parcel"
 }
+export declare type DecentralandActiveOrderAttribute = {
+    price: number;
+    expires_at: number;
+    updated_at: number;
+};
 //# sourceMappingURL=types.d.ts.map
