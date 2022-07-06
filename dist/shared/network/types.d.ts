@@ -1,18 +1,21 @@
-export declare enum ChainId {
+export declare enum Network {
     Ethereum = "ethereum",
     BSC = "bsc",
     Solana = "solana"
 }
-export declare enum EthereumNetwork {
+export declare enum EthereumChainId {
     Mainnet = "mainnet",
-    Ropsten = "ropsten"
+    Ropsten = "ropsten",
+    Rinkeby = "rinkeby",
+    Goerli = "goerli"
 }
-export declare enum BSCNetwork {
-    Mainnet = "mainnet"
-}
-export declare enum SolanaNetwork {
+export declare enum BSCChainId {
     Mainnet = "mainnet",
     Testnet = "testnet"
 }
-export declare type Network = EthereumNetwork | BSCNetwork | SolanaNetwork;
+export declare enum SolanaChainId {
+    Mainnet = "mainnet",
+    Testnet = "testnet"
+}
+export declare type ChainId = EthereumChainId | BSCChainId | SolanaChainId;
 //# sourceMappingURL=types.d.ts.map

@@ -1,24 +1,27 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SolanaNetwork = exports.BSCNetwork = exports.EthereumNetwork = exports.ChainId = void 0;
-var ChainId;
-(function (ChainId) {
-    ChainId["Ethereum"] = "ethereum";
-    ChainId["BSC"] = "bsc";
-    ChainId["Solana"] = "solana";
-})(ChainId = exports.ChainId || (exports.ChainId = {}));
-var EthereumNetwork;
-(function (EthereumNetwork) {
-    EthereumNetwork["Mainnet"] = "mainnet";
-    EthereumNetwork["Ropsten"] = "ropsten";
-})(EthereumNetwork = exports.EthereumNetwork || (exports.EthereumNetwork = {}));
-var BSCNetwork;
-(function (BSCNetwork) {
-    BSCNetwork["Mainnet"] = "mainnet";
-})(BSCNetwork = exports.BSCNetwork || (exports.BSCNetwork = {}));
-var SolanaNetwork;
-(function (SolanaNetwork) {
-    SolanaNetwork["Mainnet"] = "mainnet";
-    SolanaNetwork["Testnet"] = "testnet";
-})(SolanaNetwork = exports.SolanaNetwork || (exports.SolanaNetwork = {}));
+exports.SolanaChainId = exports.BSCChainId = exports.EthereumChainId = exports.Network = void 0;
+var Network;
+(function (Network) {
+    Network["Ethereum"] = "ethereum";
+    Network["BSC"] = "bsc";
+    Network["Solana"] = "solana";
+})(Network = exports.Network || (exports.Network = {}));
+var EthereumChainId;
+(function (EthereumChainId) {
+    EthereumChainId["Mainnet"] = "mainnet";
+    EthereumChainId["Ropsten"] = "ropsten";
+    EthereumChainId["Rinkeby"] = "rinkeby";
+    EthereumChainId["Goerli"] = "goerli";
+})(EthereumChainId = exports.EthereumChainId || (exports.EthereumChainId = {}));
+var BSCChainId;
+(function (BSCChainId) {
+    BSCChainId["Mainnet"] = "mainnet";
+    BSCChainId["Testnet"] = "testnet";
+})(BSCChainId = exports.BSCChainId || (exports.BSCChainId = {}));
+var SolanaChainId;
+(function (SolanaChainId) {
+    SolanaChainId["Mainnet"] = "mainnet";
+    SolanaChainId["Testnet"] = "testnet";
+})(SolanaChainId = exports.SolanaChainId || (exports.SolanaChainId = {}));
 //# sourceMappingURL=types.js.map
