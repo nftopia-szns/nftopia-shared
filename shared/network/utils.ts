@@ -1,4 +1,4 @@
-import { BSCChainId, EthereumChainId } from "./types";
+import { BSCChainId, EthereumChainId, PolygonChainId } from "./types";
 
 export const toCanonicalEthereumChainId = (chainId: EthereumChainId) => {
     switch (chainId) {
@@ -23,5 +23,16 @@ export const toCanonicalBSCChainId = (chainId: BSCChainId) => {
             return 97;
         default:
             return 56;
+    }
+}
+
+export const toCanonicalPolygonChainId = (chainId: PolygonChainId) => {
+    switch (chainId) {
+        case PolygonChainId.Mainnet:
+            return 137;
+        case PolygonChainId.Mumbai:
+            return 80001;
+        default:
+            return 137;
     }
 }

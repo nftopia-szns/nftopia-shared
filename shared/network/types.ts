@@ -2,6 +2,7 @@ export enum Network {
     Ethereum = "ethereum",
     BSC = "bsc",
     Solana = "solana",
+    Polygon = "polygon",
 }
 
 export enum EthereumChainId {
@@ -21,4 +22,9 @@ export enum SolanaChainId {
     Testnet = 'testnet',
 }
 
-export type ChainId = EthereumChainId | BSCChainId | SolanaChainId
+export enum PolygonChainId {
+    Mainnet = 'mainnet',
+    Mumbai = 'mumbai'
+}
+
+export type ChainId = EthereumChainId | BSCChainId | SolanaChainId | PolygonChainId
