@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.toCanonicalBSCChainId = exports.toCanonicalEthereumChainId = void 0;
+exports.toCanonicalPolygonChainId = exports.toCanonicalBSCChainId = exports.toCanonicalEthereumChainId = void 0;
 const types_1 = require("./types");
 const toCanonicalEthereumChainId = (chainId) => {
     switch (chainId) {
@@ -28,4 +28,15 @@ const toCanonicalBSCChainId = (chainId) => {
     }
 };
 exports.toCanonicalBSCChainId = toCanonicalBSCChainId;
+const toCanonicalPolygonChainId = (chainId) => {
+    switch (chainId) {
+        case types_1.PolygonChainId.Mainnet:
+            return 137;
+        case types_1.PolygonChainId.Mumbai:
+            return 80001;
+        default:
+            return 137;
+    }
+};
+exports.toCanonicalPolygonChainId = toCanonicalPolygonChainId;
 //# sourceMappingURL=utils.js.map

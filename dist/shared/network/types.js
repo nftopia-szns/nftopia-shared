@@ -1,11 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SolanaChainId = exports.BSCChainId = exports.EthereumChainId = exports.Network = void 0;
+exports.PolygonChainId = exports.SolanaChainId = exports.BSCChainId = exports.EthereumChainId = exports.Network = void 0;
 var Network;
 (function (Network) {
     Network["Ethereum"] = "ethereum";
     Network["BSC"] = "bsc";
     Network["Solana"] = "solana";
+    Network["Polygon"] = "polygon";
 })(Network = exports.Network || (exports.Network = {}));
 var EthereumChainId;
 (function (EthereumChainId) {
@@ -24,4 +25,9 @@ var SolanaChainId;
     SolanaChainId["Mainnet"] = "mainnet";
     SolanaChainId["Testnet"] = "testnet";
 })(SolanaChainId = exports.SolanaChainId || (exports.SolanaChainId = {}));
+var PolygonChainId;
+(function (PolygonChainId) {
+    PolygonChainId["Mainnet"] = "mainnet";
+    PolygonChainId["Mumbai"] = "mumbai";
+})(PolygonChainId = exports.PolygonChainId || (exports.PolygonChainId = {}));
 //# sourceMappingURL=types.js.map

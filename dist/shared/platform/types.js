@@ -7,5 +7,6 @@ var MetaversePlatform;
     MetaversePlatform["SandBox"] = "sandbox";
     MetaversePlatform["Cryptovoxels"] = "cryptovoxels";
     MetaversePlatform["SolanaTown"] = "solanatown";
+    MetaversePlatform["TestPlatform"] = "testplatform";
 })(MetaversePlatform = exports.MetaversePlatform || (exports.MetaversePlatform = {}));
 //# sourceMappingURL=types.js.map
