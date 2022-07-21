@@ -3,4 +3,5 @@ export enum MetaversePlatform {
     SandBox = 'sandbox',
     Cryptovoxels = 'cryptovoxels',
     SolanaTown = 'solanatown',
+    TestPlatform = 'testplatform',
 }
