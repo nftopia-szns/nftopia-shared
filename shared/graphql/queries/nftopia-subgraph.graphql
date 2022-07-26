@@ -1,0 +1,69 @@
+query asksWithStatus($status_in: [AskStatus!]!) {
+  asks(where: {status_in: $status_in}) {
+    id
+    address
+    tokenId
+    seller
+    quoteToken
+    price
+    createdAt
+    updatedAt
+    status
+    buyer
+  }
+}
+
+query bidsWithStatus($status_in: [BidStatus!]!) {
+  bids(where: {status_in: $status_in}) {
+    id
+    address
+    tokenId
+    bidder
+    quoteToken
+    price
+    createdAt
+    updatedAt
+    status
+  }
+}
+
+query tokenById($tokenId: ID!) {
+  token(id: $tokenId) {
+    id
+    address
+    tokenId
+    owner
+    createdAt
+    updatedAt
+  }
+}
+
+query tokensOfContract($contract: Bytes!) {
+  tokens(
+    where: {
+      address: $contract
+    }
+  ) {
+    id
+    address
+    tokenId
+    owner
+    createdAt
+    updatedAt
+  }
+}
+
+query tokensOfOwner($owner: Bytes!) {
+  tokens(
+    where: {
+      owner: $owner
+    }
+  ) {
+    id
+    address
+    tokenId
+    owner
+    createdAt
+    updatedAt
+  }
+}

@@ -1,0 +1,14 @@
+overwrite: true
+schema: "https://api.thegraph.com/subgraphs/name/phatngluu/nftopia-subgraph-mumbai"
+documents:
+  - './shared/graphql/queries/*.graphql'
+generates:
+  shared/graphql/generated.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-resolvers"
+      - "typescript-graphql-request"
+  ./graphql.schema.json:
+    plugins:
+      - "introspection"
