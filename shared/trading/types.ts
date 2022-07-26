@@ -10,7 +10,7 @@ export interface GetAssetParams {
     tokenId: string
 }
 
-export interface GetAssetBids extends GetAssetParams {
+export interface GetAssetBidsParams extends GetAssetParams {
     page: number
     pageSize: number
     filter: GetAssetBidsFilter
@@ -20,7 +20,7 @@ export interface GetAssetBidsFilter {
     status: BidStatus[]
 }
 
-export interface GetAssetAsks extends GetAssetParams {
+export interface GetAssetAsksParams extends GetAssetParams {
     page: number
     pageSize: number
     filter: GetAssetAsksFilter
@@ -29,17 +29,6 @@ export interface GetAssetAsks extends GetAssetParams {
 export interface GetAssetAsksFilter {
     status: AskStatus[]
 }
-
-export interface GetAssetBids extends GetAssetParams {
-    page: number
-    pageSize: number
-}
-
-export interface GetAssetAsks extends GetAssetParams {
-    page: number
-    pageSize: number
-}
-
 
 // export enum BidStatus {
 //     New = "New",
