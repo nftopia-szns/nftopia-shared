@@ -518,19 +518,23 @@ export enum _SubgraphErrorPolicy_ {
   Deny = 'deny'
 }
 
-export type AsksWithStatusQueryVariables = Exact<{
+export type AsksOfTokenQueryVariables = Exact<{
+  address: Scalars['Bytes'];
+  tokenId: Scalars['BigInt'];
   status_in: Array<AskStatus> | AskStatus;
 }>;
 
 
-export type AsksWithStatusQuery = { __typename?: 'Query', asks: Array<{ __typename?: 'Ask', id: string, address: any, tokenId: any, seller: any, quoteToken: any, price: any, createdAt: any, updatedAt: any, status: AskStatus, buyer?: any | null }> };
+export type AsksOfTokenQuery = { __typename?: 'Query', asks: Array<{ __typename?: 'Ask', id: string, address: any, tokenId: any, seller: any, quoteToken: any, price: any, createdAt: any, updatedAt: any, status: AskStatus, buyer?: any | null }> };
 
-export type BidsWithStatusQueryVariables = Exact<{
+export type BidsOfTokenQueryVariables = Exact<{
+  address: Scalars['Bytes'];
+  tokenId: Scalars['BigInt'];
   status_in: Array<BidStatus> | BidStatus;
 }>;
 
 
-export type BidsWithStatusQuery = { __typename?: 'Query', bids: Array<{ __typename?: 'Bid', id: string, address: any, tokenId: any, bidder: any, quoteToken: any, price: any, createdAt: any, updatedAt: any, status: BidStatus }> };
+export type BidsOfTokenQuery = { __typename?: 'Query', bids: Array<{ __typename?: 'Bid', id: string, address: any, tokenId: any, bidder: any, quoteToken: any, price: any, createdAt: any, updatedAt: any, status: BidStatus }> };
 
 export type TokenByIdQueryVariables = Exact<{
   tokenId: Scalars['ID'];
@@ -793,8 +797,8 @@ export type DirectiveResolvers<ContextType = any> = {
 };
 
 
-export const AsksWithStatusDocument = gql`
-    query asksWithStatus($status_in: [AskStatus!]!) {
+export const AsksOfTokenDocument = gql`
+    query asksOfToken($address: Bytes!, $tokenId: BigInt!, $status_in: [AskStatus!]!) {
   asks(where: {status_in: $status_in}) {
     id
     address
@@ -809,8 +813,8 @@ export const AsksWithStatusDocument = gql`
   }
 }
     `;
-export const BidsWithStatusDocument = gql`
-    query bidsWithStatus($status_in: [BidStatus!]!) {
+export const BidsOfTokenDocument = gql`
+    query bidsOfToken($address: Bytes!, $tokenId: BigInt!, $status_in: [BidStatus!]!) {
   bids(where: {status_in: $status_in}) {
     id
     address
@@ -868,11 +872,11 @@ const defaultWrapper: SdkFunctionWrapper = (action, _operationName, _operationTy
 
 export function getSdk(client: GraphQLClient, withWrapper: SdkFunctionWrapper = defaultWrapper) {
   return {
-    asksWithStatus(variables: AsksWithStatusQueryVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<AsksWithStatusQuery> {
-      return withWrapper((wrappedRequestHeaders) => client.request<AsksWithStatusQuery>(AsksWithStatusDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'asksWithStatus', 'query');
+    asksOfToken(variables: AsksOfTokenQueryVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<AsksOfTokenQuery> {
+      return withWrapper((wrappedRequestHeaders) => client.request<AsksOfTokenQuery>(AsksOfTokenDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'asksOfToken', 'query');
     },
-    bidsWithStatus(variables: BidsWithStatusQueryVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<BidsWithStatusQuery> {
-      return withWrapper((wrappedRequestHeaders) => client.request<BidsWithStatusQuery>(BidsWithStatusDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'bidsWithStatus', 'query');
+    bidsOfToken(variables: BidsOfTokenQueryVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<BidsOfTokenQuery> {
+      return withWrapper((wrappedRequestHeaders) => client.request<BidsOfTokenQuery>(BidsOfTokenDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'bidsOfToken', 'query');
     },
     tokenById(variables: TokenByIdQueryVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<TokenByIdQuery> {
       return withWrapper((wrappedRequestHeaders) => client.request<TokenByIdQuery>(TokenByIdDocument, variables, {...requestHeaders, ...wrappedRequestHeaders}), 'tokenById', 'query');

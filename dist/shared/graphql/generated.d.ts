@@ -479,10 +479,12 @@ export declare enum _SubgraphErrorPolicy_ {
     /** If the subgraph has indexing errors, data will be omitted. The default. */
     Deny = "deny"
 }
-export declare type AsksWithStatusQueryVariables = Exact<{
+export declare type AsksOfTokenQueryVariables = Exact<{
+    address: Scalars['Bytes'];
+    tokenId: Scalars['BigInt'];
     status_in: Array<AskStatus> | AskStatus;
 }>;
-export declare type AsksWithStatusQuery = {
+export declare type AsksOfTokenQuery = {
     __typename?: 'Query';
     asks: Array<{
         __typename?: 'Ask';
@@ -498,10 +500,12 @@ export declare type AsksWithStatusQuery = {
         buyer?: any | null;
     }>;
 };
-export declare type BidsWithStatusQueryVariables = Exact<{
+export declare type BidsOfTokenQueryVariables = Exact<{
+    address: Scalars['Bytes'];
+    tokenId: Scalars['BigInt'];
     status_in: Array<BidStatus> | BidStatus;
 }>;
-export declare type BidsWithStatusQuery = {
+export declare type BidsOfTokenQuery = {
     __typename?: 'Query';
     bids: Array<{
         __typename?: 'Bid';
@@ -739,15 +743,15 @@ export declare type DirectiveResolvers<ContextType = any> = {
     entity?: EntityDirectiveResolver<any, any, ContextType>;
     subgraphId?: SubgraphIdDirectiveResolver<any, any, ContextType>;
 };
-export declare const AsksWithStatusDocument: import("graphql").DocumentNode;
-export declare const BidsWithStatusDocument: import("graphql").DocumentNode;
+export declare const AsksOfTokenDocument: import("graphql").DocumentNode;
+export declare const BidsOfTokenDocument: import("graphql").DocumentNode;
 export declare const TokenByIdDocument: import("graphql").DocumentNode;
 export declare const TokensOfContractDocument: import("graphql").DocumentNode;
 export declare const TokensOfOwnerDocument: import("graphql").DocumentNode;
 export declare type SdkFunctionWrapper = <T>(action: (requestHeaders?: Record<string, string>) => Promise<T>, operationName: string, operationType?: string) => Promise<T>;
 export declare function getSdk(client: GraphQLClient, withWrapper?: SdkFunctionWrapper): {
-    asksWithStatus(variables: AsksWithStatusQueryVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<AsksWithStatusQuery>;
-    bidsWithStatus(variables: BidsWithStatusQueryVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<BidsWithStatusQuery>;
+    asksOfToken(variables: AsksOfTokenQueryVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<AsksOfTokenQuery>;
+    bidsOfToken(variables: BidsOfTokenQueryVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<BidsOfTokenQuery>;
     tokenById(variables: TokenByIdQueryVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<TokenByIdQuery>;
     tokensOfContract(variables: TokensOfContractQueryVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<TokensOfContractQuery>;
     tokensOfOwner(variables: TokensOfOwnerQueryVariables, requestHeaders?: Dom.RequestInit["headers"]): Promise<TokensOfOwnerQuery>;

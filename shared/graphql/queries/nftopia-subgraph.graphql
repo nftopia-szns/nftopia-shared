@@ -1,4 +1,4 @@
-query asksWithStatus($status_in: [AskStatus!]!) {
+query asksOfToken($address: Bytes!, $tokenId: BigInt!, $status_in: [AskStatus!]!) {
   asks(where: {status_in: $status_in}) {
     id
     address
@@ -13,7 +13,7 @@ query asksWithStatus($status_in: [AskStatus!]!) {
   }
 }
 
-query bidsWithStatus($status_in: [BidStatus!]!) {
+query bidsOfToken($address: Bytes!, $tokenId: BigInt!, $status_in: [BidStatus!]!) {
   bids(where: {status_in: $status_in}) {
     id
     address

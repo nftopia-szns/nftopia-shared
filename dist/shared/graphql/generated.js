@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getSdk = exports.TokensOfOwnerDocument = exports.TokensOfContractDocument = exports.TokenByIdDocument = exports.BidsWithStatusDocument = exports.AsksWithStatusDocument = exports._SubgraphErrorPolicy_ = exports.Token_OrderBy = exports.OrderDirection = exports.Bid_OrderBy = exports.BidStatus = exports.Ask_OrderBy = exports.AskStatus = void 0;
+exports.getSdk = exports.TokensOfOwnerDocument = exports.TokensOfContractDocument = exports.TokenByIdDocument = exports.BidsOfTokenDocument = exports.AsksOfTokenDocument = exports._SubgraphErrorPolicy_ = exports.Token_OrderBy = exports.OrderDirection = exports.Bid_OrderBy = exports.BidStatus = exports.Ask_OrderBy = exports.AskStatus = void 0;
 const graphql_tag_1 = __importDefault(require("graphql-tag"));
 var AskStatus;
 (function (AskStatus) {
@@ -64,8 +64,8 @@ var _SubgraphErrorPolicy_;
     /** If the subgraph has indexing errors, data will be omitted. The default. */
     _SubgraphErrorPolicy_["Deny"] = "deny";
 })(_SubgraphErrorPolicy_ = exports._SubgraphErrorPolicy_ || (exports._SubgraphErrorPolicy_ = {}));
-exports.AsksWithStatusDocument = (0, graphql_tag_1.default) `
-    query asksWithStatus($status_in: [AskStatus!]!) {
+exports.AsksOfTokenDocument = (0, graphql_tag_1.default) `
+    query asksOfToken($address: Bytes!, $tokenId: BigInt!, $status_in: [AskStatus!]!) {
   asks(where: {status_in: $status_in}) {
     id
     address
@@ -80,8 +80,8 @@ exports.AsksWithStatusDocument = (0, graphql_tag_1.default) `
   }
 }
     `;
-exports.BidsWithStatusDocument = (0, graphql_tag_1.default) `
-    query bidsWithStatus($status_in: [BidStatus!]!) {
+exports.BidsOfTokenDocument = (0, graphql_tag_1.default) `
+    query bidsOfToken($address: Bytes!, $tokenId: BigInt!, $status_in: [BidStatus!]!) {
   bids(where: {status_in: $status_in}) {
     id
     address
@@ -134,11 +134,11 @@ exports.TokensOfOwnerDocument = (0, graphql_tag_1.default) `
 const defaultWrapper = (action, _operationName, _operationType) => action();
 function getSdk(client, withWrapper = defaultWrapper) {
     return {
-        asksWithStatus(variables, requestHeaders) {
-            return withWrapper((wrappedRequestHeaders) => client.request(exports.AsksWithStatusDocument, variables, Object.assign(Object.assign({}, requestHeaders), wrappedRequestHeaders)), 'asksWithStatus', 'query');
+        asksOfToken(variables, requestHeaders) {
+            return withWrapper((wrappedRequestHeaders) => client.request(exports.AsksOfTokenDocument, variables, Object.assign(Object.assign({}, requestHeaders), wrappedRequestHeaders)), 'asksOfToken', 'query');
         },
-        bidsWithStatus(variables, requestHeaders) {
-            return withWrapper((wrappedRequestHeaders) => client.request(exports.BidsWithStatusDocument, variables, Object.assign(Object.assign({}, requestHeaders), wrappedRequestHeaders)), 'bidsWithStatus', 'query');
+        bidsOfToken(variables, requestHeaders) {
+            return withWrapper((wrappedRequestHeaders) => client.request(exports.BidsOfTokenDocument, variables, Object.assign(Object.assign({}, requestHeaders), wrappedRequestHeaders)), 'bidsOfToken', 'query');
         },
         tokenById(variables, requestHeaders) {
             return withWrapper((wrappedRequestHeaders) => client.request(exports.TokenByIdDocument, variables, Object.assign(Object.assign({}, requestHeaders), wrappedRequestHeaders)), 'tokenById', 'query');
