@@ -1,1 +1,1 @@
-{"version":3,"file":"types.d.ts","sourceRoot":"","sources":["../../../shared/contract/types.ts"],"names":[],"mappings":"AAAA,oBAAY,YAAY;IACpB,WAAW,gBAAgB;CAC9B"}
+{"version":3,"file":"types.d.ts","sourceRoot":"","sources":["../../../shared/contract/types.ts"],"names":[],"mappings":"AAAA,oBAAY,YAAY;IACpB,WAAW,gBAAgB;IAC3B,SAAS,cAAc;IACvB,QAAQ,aAAa;CACxB"}
